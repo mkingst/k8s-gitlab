@@ -1,0 +1,8 @@
+deploy:
+   image:
+     name: nginx:latest
+     entrypoint: [""]
+   script:
+   - kubectl config get-contexts
+   - kubectl config use-context kubernetes-admin@kubernetes
+   - kubectl get pods
