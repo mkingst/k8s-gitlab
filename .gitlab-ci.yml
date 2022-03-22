@@ -2,6 +2,6 @@ deploy_to_dev:
   stage: deploy
   image: bitnami/kubectl:latest
   script:
-    - mkdir -f -r $HOME/.kube/config
+    - mkdir -p $HOME/.kube/config
     - echo -n $KUBE_CONFIG > $HOME/.kube/config
     - kubectl config view
