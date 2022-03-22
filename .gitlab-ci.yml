@@ -7,6 +7,7 @@ deploy:
     - kubectl version
     - echo -n $KUBE_CONFIG | base64 -d > ./config
     - kubectl get pods
+    - kubectl apply -f gitlab-runner-admin.yml
     - kubectl get deployments
     - kubecrl get services
     - kubectl apply -f dvwa-dep.yml
