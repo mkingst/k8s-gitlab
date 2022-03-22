@@ -17,6 +17,7 @@ spec:
       labels:
         app: dvwa
     spec:
+      serviceAccountName: gitlab-runner
       containers:
       - image: vulnerables/web-dvwa
         name: web-dvwa
