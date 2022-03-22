@@ -7,3 +7,5 @@ deploy:
     - kubectl version
     - echo $KUBECONFIG64 | base64 -d >> $KUBECONFIG 
     - kubectl apply -f dvwa-dep.yml
+variables:
+ KUBECONFIG64: $KUBECONFIG64
