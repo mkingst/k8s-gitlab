@@ -11,4 +11,5 @@ deploy:
     - kubectl get deployments
     - kubectl apply -f dvwa-dep.yml
 variables:
+#assign base64 encoded kubeconfig file (in GitLab UI) to variable
   KUBE_CONFIG: $KUBE_CONFIG64
