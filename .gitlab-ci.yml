@@ -1,13 +1,5 @@
-deploy-prod:
+deploy:
   stage: deploy
-  image: roffe/kubectl
+  image: bitnami/kubectl:latest
   script:
-    - kubectl get pods
-    - kubectl get all
-    - kubectl get namespaces
-  environment:
-    name: production
-    kubernetes:
-      namespace: default
-  only:
-    - master
+    - kubectl version
