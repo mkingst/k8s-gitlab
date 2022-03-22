@@ -1,7 +1,13 @@
-deploy_to_dev:
+deploy-prod:
   stage: deploy
-  image: bitnami/kubectl:latest
+  image: roffe/kubectl
   script:
-    - mkdir -p $HOME/.kube/config
-    - echo -n $KUBE_CONFIG > $HOME/.kube/config
-    - kubectl config view
+    - kubectl get pods
+    - kubectl get all
+    - kubectl get namespaces
+  environment:
+    name: production
+    kubernetes:
+      namespace: default
+  only:
+    - master
