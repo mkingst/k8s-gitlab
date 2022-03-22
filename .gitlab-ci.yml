@@ -6,3 +6,5 @@ deploy:
    - kubectl config get-contexts
    - kubectl config use-context kubernetes-admin@kubernetes
    - kubectl get pods
+variables:
+  KUBERNETES_NAMESPACE_OVERWRITE: ci-${CI_COMMIT_REF_SLUG}
