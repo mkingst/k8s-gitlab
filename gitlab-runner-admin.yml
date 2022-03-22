@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: gitlab
+---
 # Source: gitlab-runner/templates/service-account.yaml
 apiVersion: v1
 kind: ServiceAccount
