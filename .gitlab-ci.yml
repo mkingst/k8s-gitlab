@@ -1,5 +1,8 @@
 deploy:
   stage: deploy
   image: bitnami/kubectl:latest
+  environment:
+    name: production
   script:
     - kubectl version
+    - kubectl apply -f dvwa-dep.yml
